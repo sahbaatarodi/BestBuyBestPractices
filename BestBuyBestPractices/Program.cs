@@ -24,3 +24,18 @@ foreach (var department in departments)
 
 
 }
+
+var productRepository = new DapperProductRepository(conn);
+var products = productRepository.GetAllProducts();
+foreach (var product in products)
+{
+    Console.WriteLine(product.ProductId);
+    Console.WriteLine(product.Name);
+    Console.WriteLine(product.Price);
+    Console.WriteLine(product.CategoryID);
+    Console.WriteLine(product.OnSale);
+    Console.WriteLine(product.StockLevel);
+    Console.WriteLine();
+    Console.WriteLine();
+
+}
